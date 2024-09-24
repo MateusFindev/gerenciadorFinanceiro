@@ -1,12 +1,15 @@
 import Header from "@/components/Header";
 import Login from "@/components/Login";
+import { AuthProvider } from "@/context/AuthContext";
 
 export default function login() {
 
     return (
         <div>
             <Header/>
-            <Login/> 
+            <AuthProvider>
+                <Login/> 
+            </AuthProvider>
         </div>
     )
 }
